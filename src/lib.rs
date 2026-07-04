@@ -6,7 +6,7 @@ use bc_signals::train::mm::MM;
 use bc_signals::train::ready_imports::*;
 use bc_utils_lg::types::maps::MAP;
 
-use bc_utils_lg::settings::SETTINGS_SIGNAL;
+use bc_utils_lg::structs::settings::SETTINGS_SIGNAL;
 
 pub static FUNCS_EXTRACT_ARGS: LazyLock<fn() -> MAP<&'static str, fn(&SETTINGS_SIGNAL) -> Box<dyn SignalTrain>>> = LazyLock::new(|| {
     || {
